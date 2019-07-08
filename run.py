@@ -33,6 +33,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     w, h = model_wh(args.resize)
+
     if w == 0 or h == 0:
         e = TfPoseEstimator(get_graph_path(args.model), target_size=(432, 368))
     else:

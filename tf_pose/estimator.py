@@ -313,7 +313,9 @@ class TfPoseEstimator:
 
         self.graph = tf.get_default_graph()
         tf.import_graph_def(graph_def, name='TfPoseEstimator')
-        self.persistent_sess = tf.Session(graph=self.graph, config=tf_config)
+        config = tf.ConfigProto(log_device_placement=True)
+        config.gpu_options.allow_growth = True
+        self.persistent_sess = tf.Session(graph=self.graph, config=config)
 
         # for op in self.graph.get_operations():
         #     print(op.name)
