@@ -11,7 +11,7 @@ selected = 0
 coord = None
 warped_dimensions = None
 room_size = None
-
+warp_click = None
 def _order_points(pts):
     """
     0       1
@@ -65,10 +65,15 @@ def get_points(event, x, y, flags, param):
 
 def get_coordinates(event, x, y, flags, param):
     'Get the actual measurement of any point in the image given the dimensions of the room'
-    global coord
+    global coord, warp_click
+    # opencv height width
+    # our implementation width height
+
     if event == cv2.EVENT_LBUTTONDOWN:
-        print('yeet')
-    return None
+        realx = room_size[0] * x / warped_dimensions[1]
+        realy = room_size[1] * y / warped_dimensions[0]
+        coord = (realx, realy)
+        warp_click = (x, y)
 
 
 if __name__ == '__main__':
@@ -80,9 +85,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     w, h = model_wh(args.resize)
-    rw, rh = 5, 5
-    room_size = (rw, rh)
-    e = TfPoseEstimator(get_graph_path(args.model), target_size=(w, h))
+    rw, rh = args.roomsize.split('x')
+    room_size = (float(rw), float(rh))
+    print(room_size)
+    #e = TfPoseEstimator(get_graph_path(args.model), target_size=(w, h))
     cam = cv2.VideoCapture(args.camera)
 
     # Here, we setup the 4 corner points of the room
@@ -110,7 +116,7 @@ if __name__ == '__main__':
         cv2.imshow('origin', clone)
         key = cv2.waitKey(1)
         for pts in pts_array:
-            cv2.circle(clone, (pts[0], pts[1]), 5, (0, 0, 255), -1)
+            cv2.circle(clone, (pts[0], pts[1]), 3, (0, 0, 255), -1)
 
         if key == ord('r'):
             pts_array = []
@@ -129,12 +135,17 @@ if __name__ == '__main__':
                     (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                     (0, 255, 0), 2)
         for pts in pts_array:
-            cv2.circle(image, (pts[0], pts[1]), 5, (0, 0, 255), -1)
+            cv2.circle(image, (pts[0], pts[1]), 3, (0, 0, 255), -1)
         cv2.imshow('original', image)
-
         warped = four_point_transform(image, pts_array)
         warped_dimensions = warped.shape[:2]
+        if coord is not None:
+            cv2.putText(warped, 'x: {:.2f}m,  y: {:.2f}m'.format(coord[0], coord[1]),
+                        (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
+                        (0, 255, 0), 2)
+            cv2.circle(warped, (warp_click[0], warp_click[1]), 3, (0, 0, 255), -1)
         cv2.imshow('warped', warped)
+
         fps_time = time.time()
         if cv2.waitKey(1) == 27:
             # ESC
