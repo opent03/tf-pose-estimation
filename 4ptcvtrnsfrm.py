@@ -81,7 +81,7 @@ if __name__ == '__main__':
     parser.add_argument('--resize', type=str, default='1280x720')
     parser.add_argument('--camera', type=int, default=0)
     parser.add_argument('--model', type=str, default='mobilenet_thin')
-    parser.add_argument('--roomsize', type=str, default='5x5')
+    parser.add_argument('--roomsize', type=str, default='2x2')
     args = parser.parse_args()
 
     w, h = model_wh(args.resize)
@@ -143,6 +143,10 @@ if __name__ == '__main__':
             cv2.putText(warped, 'x: {:.2f}m,  y: {:.2f}m'.format(coord[0], coord[1]),
                         (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                         (0, 255, 0), 2)
+            '''cv2.putText(warped,
+                    "FPS: {:.2f}".format((1.0 / (time.time() - fps_time))),
+                    (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
+                    (0, 255, 0), 2)'''
             cv2.circle(warped, (warp_click[0], warp_click[1]), 3, (0, 0, 255), -1)
         cv2.imshow('warped', warped)
 

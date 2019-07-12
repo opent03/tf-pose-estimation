@@ -119,3 +119,4 @@ src/pafprocess/pafprocess.py
 src/pafprocess/pafprocess_wrap.cpp
 src/pafprocess/pafprocess_wrap.cxx
 tf_pose/pafprocess/pafprocess_wrap.cxx
+tf_pose/pafprocess/pafprocess.*
