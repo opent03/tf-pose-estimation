@@ -125,6 +125,20 @@ import tf_pose
 coco_style = tf_pose.infer(image_path)
 ```
 
+## Perspective warping and pose inference
+
+For perspective warping, run:
+
+```bash
+$ python3 bgrwarp.py --roomsize=2x2 # 2.0m x 2.0m
+```
+
+For pose inference on the transformed images, run:
+
+```bash
+$ python3 localization.py
+```
+
 ## ROS Support
 
 See : [etcs/ros.md](./etcs/ros.md)
