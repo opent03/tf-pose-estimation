@@ -52,7 +52,7 @@ def four_point_transform(image, pts):
     M = cv2.getPerspectiveTransform(rect, dst)
     warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight))
 
-    return warped
+    return warped, (M, (maxWidth, maxHeight))
 
 
 def get_points(event, x, y, flags, param):
@@ -137,7 +137,7 @@ if __name__ == '__main__':
         for pts in pts_array:
             cv2.circle(image, (pts[0], pts[1]), 3, (0, 0, 255), -1)
         cv2.imshow('original', image)
-        warped = four_point_transform(image, pts_array)
+        warped, _ = four_point_transform(image, pts_array)
         warped_dimensions = warped.shape[:2]
         if coord is not None:
             cv2.putText(warped, 'x: {:.2f}m,  y: {:.2f}m'.format(coord[0], coord[1]),
