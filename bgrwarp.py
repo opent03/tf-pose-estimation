@@ -75,6 +75,25 @@ def get_coordinates(event, x, y, flags, param):
         coord = (realx, realy)
         warp_click = (x, y)
 
+def mat_from_img(image):
+    'Feed in image, this selects 4 points and returns the perspective warp matrix'
+    global pts_array, selected
+    clone = image.copy()
+    cv2.namedWindow('matrix_setup')
+    cv2.setMouseCallback('matrix_setup', get_points)
+    while selected < 4:
+        cv2.imshow('matrix_setup', clone)
+        key = cv2.waitKey(1)
+        for pts in pts_array:
+            cv2.circle(clone, (pts[0], pts[1]), 3, (0, 0, 255), -1)
+
+        if key == ord('r'):
+            pts_array = []
+            selected = 0
+            clone = origin.copy()
+    cv2.destroyAllWindows()
+    _, dat = four_point_transform(image, pts_array)
+    return dat
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

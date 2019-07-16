@@ -18,7 +18,7 @@ logger.addHandler(ch)
 
 fps_time = 0
 
-
+frame_number = 0
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='tf-pose-estimation Video')
     parser.add_argument('--video', type=str, default='')
@@ -32,19 +32,24 @@ if __name__ == '__main__':
     logger.debug('initialization %s : %s' % (args.model, get_graph_path(args.model)))
     w, h = model_wh(args.resolution)
     e = TfPoseEstimator(get_graph_path(args.model), target_size=(w, h))
-    cap = cv2.VideoCapture(args.video)
+    cap = cv2.VideoCapture('videos/vid1.webm')
 
     if cap.isOpened() is False:
         print("Error opening video stream or file")
     while cap.isOpened():
         ret_val, image = cap.read()
+        target_size = (656, 368)
+        image = cv2.resize(image, target_size)
+        frame_number += 1
+        cv2.waitKey(int(1000/15))
+        if frame_number == 3:
+            humans = e.inference(image)
+            if not args.showBG:
+                image = np.zeros(image.shape)
+            image = TfPoseEstimator.draw_humans(image, humans, imgcopy=False)
+            frame_number = 0
 
-        humans = e.inference(image)
-        if not args.showBG:
-            image = np.zeros(image.shape)
-        image = TfPoseEstimator.draw_humans(image, humans, imgcopy=False)
-
-        cv2.putText(image, "FPS: %f" % (1.0 / (time.time() - fps_time)), (10, 10),  cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+        cv2.putText(image, "FPS: {:.2f}".format(1.0 / (time.time() - fps_time)), (10, 10),  cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
         cv2.imshow('tf-pose-estimation result', image)
         fps_time = time.time()
         if cv2.waitKey(1) == 27:

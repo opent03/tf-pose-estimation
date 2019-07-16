@@ -59,9 +59,22 @@ model_path = 'mobilenet_thin'
 e = TfPoseEstimator(get_graph_path('mobilenet_thin'), target_size=target_size)
 t = time.time()
 humans = e.inference(images[1], upsample_size=4.0)
-print(humans)
+viet = humans[0]
 elapsed = time.time() - t
 displayed = TfPoseEstimator.draw_humans(images[1], humans, imgcopy=False)
+try:
+    loc_list = TfPoseEstimator.get_xy(viet)
+    print(loc_list)
+    print(displayed.shape)
+    loc_list = list(map(lambda x: (x[0]*target_size[0], x[1]*target_size[1]), loc_list))
+    print(loc_list)
+    midpt = TfPoseEstimator.get_midpt(loc_list[0], loc_list[1])
+    midpt = list(map(lambda x: int(x), (midpt[0], midpt[1])))
+    print(midpt)
+    cv2.circle(displayed, tuple(midpt), 3, (255, 123, 85), thickness=3)
+except:
+    pass
+
 cv2.namedWindow('humans')
 cv2.imshow('humans', displayed)
 cv2.namedWindow('humans_warped')

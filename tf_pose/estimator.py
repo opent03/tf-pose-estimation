@@ -280,7 +280,9 @@ class PoseEstimator:
 
             for part_idx in range(18):
                 c_idx = int(pafprocess.get_part_cid(human_id, part_idx))
-                if c_idx < 0:
+                'Extra sauce here'
+                if c_idx < 0 or part_idx not in [ 10, 13]:
+                #if c_idx < 0:
                     continue
 
                 is_added = True
@@ -416,6 +418,18 @@ class TfPoseEstimator:
 
         return npimg
 
+    @staticmethod
+    def get_xy(human, dec=3):
+        lst = []
+        for i in [10, 13]:
+            body_part = human.body_parts[i]
+            lst.append((round(body_part.x, dec), round(body_part.y, dec)))
+        return lst
+
+    @staticmethod
+    def get_midpt(pt1, pt2):
+        return ((pt1[0] + pt2[0])/2), ((pt1[1] + pt2[1])/2)
+
     def _get_scaled_img(self, npimg, scale):
         get_base_scale = lambda s, w, h: max(self.target_size[0] / float(h), self.target_size[1] / float(w)) * s
         img_h, img_w = npimg.shape[:2]
@@ -517,7 +531,7 @@ class TfPoseEstimator:
         else:
             return cropped
 
-    def inference(self, npimg, resize_to_default=True, upsample_size=1.0):
+    def inference(self, npimg, resize_to_default=True, upsample_size=5.0):
         if npimg is None:
             raise Exception('The image is not valid. Please check your image exists.')
 
