@@ -419,7 +419,7 @@ class TfPoseEstimator:
         return npimg
 
     @staticmethod
-    def get_xy(human, dec=3):
+    def get_xy(human, dec=5):
         lst = []
         for i in [10, 13]:
             body_part = human.body_parts[i]
@@ -427,8 +427,8 @@ class TfPoseEstimator:
         return lst
 
     @staticmethod
-    def get_midpt(pt1, pt2):
-        return ((pt1[0] + pt2[0])/2), ((pt1[1] + pt2[1])/2)
+    def get_midpt(pt1, pt2, dec=3):
+        return round((pt1[0] + pt2[0])/2, dec), round((pt1[1] + pt2[1])/2, dec)
 
     def _get_scaled_img(self, npimg, scale):
         get_base_scale = lambda s, w, h: max(self.target_size[0] / float(h), self.target_size[1] / float(w)) * s

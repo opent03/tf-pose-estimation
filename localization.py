@@ -64,8 +64,6 @@ elapsed = time.time() - t
 displayed = TfPoseEstimator.draw_humans(images[1], humans, imgcopy=False)
 try:
     loc_list = TfPoseEstimator.get_xy(viet)
-    print(loc_list)
-    print(displayed.shape)
     loc_list = list(map(lambda x: (x[0]*target_size[0], x[1]*target_size[1]), loc_list))
     print(loc_list)
     midpt = TfPoseEstimator.get_midpt(loc_list[0], loc_list[1])
