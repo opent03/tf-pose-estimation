@@ -121,4 +121,3 @@ src/pafprocess/pafprocess_wrap.cxx
 tf_pose/pafprocess/pafprocess_wrap.cxx
 tf_pose/pafprocess/pafprocess.*
 .DS_Store
-videos/

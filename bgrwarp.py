@@ -90,7 +90,7 @@ def mat_from_img(image):
         if key == ord('r'):
             pts_array = []
             selected = 0
-            clone = origin.copy()
+            clone = image.copy()
     cv2.destroyAllWindows()
     _, dat = four_point_transform(image, pts_array)
     return dat

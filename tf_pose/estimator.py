@@ -281,7 +281,7 @@ class PoseEstimator:
             for part_idx in range(18):
                 c_idx = int(pafprocess.get_part_cid(human_id, part_idx))
                 'Extra sauce here'
-                if c_idx < 0 or part_idx not in [ 10, 13]:
+                if c_idx < 0 or part_idx not in [10, 13]:
                 #if c_idx < 0:
                     continue
 

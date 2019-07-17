@@ -13,15 +13,16 @@ from bgrwarp import mat_from_img
 target_size = (656, 368)
 
 def warp(mat, point, dims):
-    point = np.array([point[0], point[1]])
+    point = np.array([[point[0], point[1]]])
+    point = point.reshape((-1,1,2))
     newpoint = cv2.perspectiveTransform(point, mat)
-    print(newpoint)
+    newpoint = newpoint.reshape(2,)
     return newpoint
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='video_labeling')
-    parser.add_argument('--video', type=str, default='videos/vid1.webm')
+    parser.add_argument('--video', type=str, default='videos/vid1.mov')
     parser.add_argument('--model', type=str, default='mobilenet_thin',
                         help='cmu / mobilenet_thin / mobilenet_v2_large / mobilenet_v2_small')
     parser.add_argument('--warped_labels', type=bool, default=True,
@@ -57,8 +58,12 @@ if __name__ == '__main__':
                     loc_list = TfPoseEstimator.get_xy(human=humans[0])
                     midpt = TfPoseEstimator.get_midpt(loc_list[0], loc_list[1])
                     if args.warped_labels:
+                        midpt = (midpt[0]*target_size[0], midpt[1]*target_size[1])
                         midpt = warp(M, midpt, (width, height))
+                        midpt = midpt[0]/target_size[0], midpt[1]/target_size[1]
+                        print(midpt)
                     f.write('({},{})\n'.format(midpt[0], midpt[1]))
+                    print('wrote successfully')
                 except Exception as E:
                     print(E)
                     f.write('NaN\n')
