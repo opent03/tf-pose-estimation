@@ -27,17 +27,20 @@ if __name__ == '__main__':
     parser.add_argument('--show-process', type=bool, default=False,
                         help='for debug purpose, if enabled, speed for inference is dropped.')
     parser.add_argument('--showBG', type=bool, default=True, help='False to show skeleton only.')
+    parser.add_argument('--flipvideo', type=bool, default=False, help='Does exactly what you think it does')
     args = parser.parse_args()
 
     logger.debug('initialization %s : %s' % (args.model, get_graph_path(args.model)))
     w, h = model_wh(args.resolution)
     e = TfPoseEstimator(get_graph_path(args.model), target_size=(w, h))
-    cap = cv2.VideoCapture('videos/vid1.mov')
+    cap = cv2.VideoCapture(args.video)
 
     if cap.isOpened() is False:
         print("Error opening video stream or file")
     while cap.isOpened():
         ret_val, image = cap.read()
+        if args.flipvideo:
+            image = cv2.flip(image, -1)
         target_size = (656, 368)
         image = cv2.resize(image, target_size)
         frame_number += 1

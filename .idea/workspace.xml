@@ -4,7 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/bgrwarp.py" line="21" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0cf594-1acd-4339-9095-ffe4a7442411" name="Default Changelist" comment="" />
+    <list default="true" id="1c0cf594-1acd-4339-9095-ffe4a7442411" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plot_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labels/label2.dat" beforeDir="false" afterPath="$PROJECT_DIR$/labels/label2.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/pre_label.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_video.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,33 +21,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="29" column="36" selection-start-line="28" selection-start-column="37" selection-end-line="29" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bgrwarp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="e#92#110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tf_pose/estimator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="7362">
               <caret line="421" column="27" selection-start-line="421" selection-start-column="27" selection-end-line="421" selection-end-column="27" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -52,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="899">
+            <state relative-caret-position="1098">
               <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -64,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_video.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="30" selection-start-line="22" selection-start-column="4" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="996">
+              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -73,14 +56,71 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/video_labeling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
               <folding>
                 <element signature="e#64#73#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labels/label1.dat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pre_label.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labels/label1FIXED.dat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot_path.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../anaconda3/envs/py36/lib/python3.6/site-packages/matplotlib/animation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="1688" selection-start-line="1688" selection-end-line="1688" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labels/label2.dat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -118,28 +158,30 @@
         <option value="$PROJECT_DIR$/run_webcam.py" />
         <option value="$PROJECT_DIR$/tf_pose/common.py" />
         <option value="$PROJECT_DIR$/localization.py" />
-        <option value="$PROJECT_DIR$/run_video.py" />
         <option value="$PROJECT_DIR$/bgrwarp.py" />
-        <option value="$PROJECT_DIR$/video_labeling.py" />
         <option value="$PROJECT_DIR$/tf_pose/estimator.py" />
         <option value="$PROJECT_DIR$/label2.dat" />
+        <option value="$PROJECT_DIR$/warp_single_image.py" />
+        <option value="$PROJECT_DIR$/video_labeling.py" />
+        <option value="$PROJECT_DIR$/run_video.py" />
         <option value="$PROJECT_DIR$/labels/label2.dat" />
         <option value="$PROJECT_DIR$/pre_label.py" />
-        <option value="$PROJECT_DIR$/warp_single_image.py" />
+        <option value="$PROJECT_DIR$/plot_path.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
-    <option name="y" value="22" />
-    <option name="width" value="1341" />
-    <option name="height" value="878" />
+    <option name="x" value="20" />
+    <option name="y" value="131" />
+    <option name="width" value="1246" />
+    <option name="height" value="1293" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,13 +207,23 @@
             <path>
               <item name="tf-pose-estimation" type="b2602c69:ProjectViewProjectNode" />
               <item name="tf-pose-estimation" type="462c0819:PsiDirectoryNode" />
+              <item name="viddat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tf-pose-estimation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tf-pose-estimation" type="462c0819:PsiDirectoryNode" />
+              <item name="viddat" type="462c0819:PsiDirectoryNode" />
+              <item name="pos10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tf-pose-estimation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tf-pose-estimation" type="462c0819:PsiDirectoryNode" />
               <item name="videos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,8 +252,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.warp_single_image">
-    <configuration name="4ptcvtrnsfrm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.plot_path">
+    <configuration name="plot_path" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tf-pose-estimation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -213,7 +265,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bgrwarp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_path.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -308,11 +360,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.warp_single_image" />
+        <item itemvalue="Python.plot_path" />
         <item itemvalue="Python.pre_label" />
+        <item itemvalue="Python.warp_single_image" />
         <item itemvalue="Python.video_labeling" />
         <item itemvalue="Python.run_video" />
-        <item itemvalue="Python.4ptcvtrnsfrm" />
       </list>
     </recent_temporary>
   </component>
@@ -339,14 +391,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="38" width="1886" height="1375" extended-state="0" />
+    <frame x="20" y="131" width="1246" height="1293" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08641304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26666668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.39951575" />
+      <window_info anchor="bottom" id="Debug" order="2" visible="true" weight="0.18668972" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3292978" />
@@ -354,10 +407,10 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3292978" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3292978" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.22391857" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="Run" order="3" side_tool="true" visible="true" weight="0.2475" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -428,63 +481,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_video.py">
+    <entry file="file://$PROJECT_DIR$/warp_single_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="30" selection-start-line="22" selection-start-column="4" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/localization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
+        <state relative-caret-position="255">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video_labeling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#64#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labels/label1.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="3" lean-forward="true" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labels/label2.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre_label.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#66#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="360">
           <caret line="29" column="36" selection-start-line="28" selection-start-column="37" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -492,19 +501,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tf_pose/estimator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="421" column="27" selection-start-line="421" selection-start-column="27" selection-end-line="421" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bgrwarp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
+        <state relative-caret-position="900">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#92#110#0" expanded="true" />
@@ -512,12 +511,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/warp_single_image.py">
+    <entry file="file://$PROJECT_DIR$/tf_pose/estimator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="7362">
+          <caret line="421" column="27" selection-start-line="421" selection-start-column="27" selection-end-line="421" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labels/label2.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_labeling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#64#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="996">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../anaconda3/envs/py36/lib/python3.6/site-packages/matplotlib/animation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="1688" selection-start-line="1688" selection-end-line="1688" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_label.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labels/label1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labels/label1FIXED.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
