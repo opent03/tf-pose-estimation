@@ -45,36 +45,36 @@ def interpolate(idx, lst):
         k += 1
     return lst
 
+if __name__ == '__main__':
+    f = open('labels/label1.dat', 'r')
+    first = next(f)
+    lst = [eval(j) if j != 'NaN' else 'NaN' for j in [i.rstrip() for i in f.readlines()]]
+    nan_indices = []
+    for i in range(len(lst)):
+        if lst[i] == 'NaN':
+            nan_indices.append(i)
+    indices_to_process = []
+    for nan_index in nan_indices:
+        if(nan_index) == 0:
+            indices_to_process.append(-1)
+            continue
+        if lst[nan_index-1] != 'NaN':
+            indices_to_process.append(nan_index-1)
+
+    # round
+    def fc(x):
+        if x == 'NaN':
+            return 'NaN'
+        else:
+            return (round(x[0],3), round(x[1],3))
 
 
-f = open('labels/label1.dat', 'r')
-first = next(f)
-lst = [eval(j) if j != 'NaN' else 'NaN' for j in [i.rstrip() for i in f.readlines()]]
-nan_indices = []
-for i in range(len(lst)):
-    if lst[i] == 'NaN':
-        nan_indices.append(i)
-indices_to_process = []
-for nan_index in nan_indices:
-    if(nan_index) == 0:
-        indices_to_process.append(-1)
-        continue
-    if lst[nan_index-1] != 'NaN':
-        indices_to_process.append(nan_index-1)
-
-# round
-def fc(x):
-    if x == 'NaN':
-        return 'NaN'
-    else:
-        return (round(x[0],3), round(x[1],3))
-
-
-for idx in indices_to_process:
-    lst = interpolate(idx, lst)
-lst = list(map(fc, lst))
-with open('labels/label1FIXED.dat', 'w+') as f:
-    f.write(first)
-    for element in lst:
-        f.write('({},{})\n'.format(element[0], element[1]))
+    for idx in indices_to_process:
+        lst = interpolate(idx, lst)
+    lst = list(map(fc, lst))
+    with open('labels/label1FIXED.dat', 'w+') as f:
+        f.write(first)
+        for element in lst:
+            element = fc(element)
+            f.write('({},{})\n'.format(element[0], element[1]))
 
